@@ -71,7 +71,7 @@ bool layer2_frame_recv(interface_t *inf, char *pkt, uint32_t pkt_size)
   /* Basic check for the interface properties */
   l2_inf_check(inf, eth_hdr);
 
-  if (IF_L3_INTERFACE(inf)) {
+  if (IF_L3_MODE(inf)) {
       send_to_upper_layer(pkt);
   } else if (IF_L2_MODE(inf) == ACCESS || 
             IF_L2_MODE(inf) == TRUNK ) {
