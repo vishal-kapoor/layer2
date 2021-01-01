@@ -28,8 +28,10 @@ typedef struct _inf_prop {
                           uint8_t mask; /* 0 - 255 */
 } inf_prop_t;
 
-#define IF_MAC(intf_ptr)   ((intf_ptr)->intf_prop.mac_addr.mac)
-#define IF_IP(intf_ptr)    ((intf_ptr)->intf_prop.ip_add.ip_addr)
+#define IF_MAC(intf_ptr)        ((intf_ptr)->intf_prop.mac_addr.mac)
+#define IF_IP(intf_ptr)         ((intf_ptr)->intf_prop.ip_add.ip_addr)
+#define IF_L2_MODE(intf_ptr)    (intf_ptr->intf_prop.intf_l2_mode)
+#define IF_L3_MODE(intf_ptr)    (intf_ptr->intf_prop.ip_configured == TRUE)
 
 struct mac_addr {
 		char mac[6];
