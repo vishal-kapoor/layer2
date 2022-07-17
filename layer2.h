@@ -1,5 +1,9 @@
 /*************************************************
- Layer 2 header file 
+      Filename:     layer2.h
+      Description:  Layer 2 header file 
+      Version:      1.0
+      Author:       Vishal Kapoor
+
 **************************************************/
 
 
@@ -9,6 +13,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdint.h>
 
 #define INF_MAX_VLAN 20
 typedef enum {
@@ -35,7 +40,7 @@ typedef struct _inf_prop {
 
 struct mac_addr {
 		char mac[6];
-		} __attribute__((packed));;
+		} __attribute__((packed));
 
 typedef struct mac_addr mac_addr_t;
 
@@ -46,7 +51,7 @@ struct eth_hdr {
 		uint16_t 	type;
 		char		data[256]; /*MAX can be 1500 */
 		uint32_t	fcs;
-} __attribute__((packed));;
+} __attribute__((packed));
 
 typedef struct eth_hdr eth_hdr_t;
 
@@ -65,7 +70,7 @@ struct eth_vlan_hdr {
                     mac_addr_t  src_mac;
                     vlan_hdr_t  vlan_hdr;
                     uint16_t    type;
-                    char        data[256]; /*Maximum allowed 1500 bytes */
+                    char        data[256]; /*Maximum 1500 bytes */
                     uint32_t    fcs;
 } __attribute__((packed));;
 

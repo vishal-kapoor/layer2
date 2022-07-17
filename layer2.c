@@ -1,4 +1,11 @@
-#include <stdio.h>
+/*************************************************
+      Filename:     layer2.c
+      Description:  Sample Layer 2 implementation
+      Version:      1.0
+      Author:       Vishal Kapoor
+
+**************************************************/
+
 #include "layer2.h"
 
 
